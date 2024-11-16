@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+@font-face {
+  font-family: "inter";
+  src: url("./fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf")
+      format("truetype"),
+    url("./fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #062150;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(326.75, 86%, 51%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 20% 1%, hsl(250, 69%, 47%) 0, transparent 35%),
+    radial-gradient(at 82% 65%, hsl(218.18, 86%, 45%) 0, transparent 55%);
+}
+
+.blur-card {
+  backdrop-filter: blur(24px) saturate(152%);
+  -webkit-backdrop-filter: blur(24px) saturate(152%);
+  background-color: rgba(17, 25, 40, 0.44);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* General scrollbar styling */
+::-webkit-scrollbar {
+  width: 2px; /* Make the scrollbar smaller */
+  height: 8px; /* Horizontal scrollbar height (if needed) */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Optional: transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff7eb3, #460510); /* Gradient color */
+  border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+}
+
+/* Optional: Hover effect for scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #ff758c,
+    #ff7eb3
+  ); /* Reverse gradient on hover */
+}
